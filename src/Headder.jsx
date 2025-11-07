@@ -1,6 +1,6 @@
 import React from 'react'
 // import Features from './Features'
-import newlogo from 'src/assets/newlogo.png'
+import newlogo from './assets/newlogo.png'
 
 const Headder = () => {
   return (
