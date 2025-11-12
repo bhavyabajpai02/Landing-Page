@@ -52,10 +52,9 @@ const Features = () => {
               initialOpacity={.1}
               animateOpacity
               scale={.95}
-              threshold={0.3} 
-            //   delay={index * 0.5} 
+              threshold={0.3}  
             >
-               <div key={feature.title} className={`flex flex-col md:flex-row items-center gap-20 p-6 h- bg-[#] animate-fade-in ease- animation-y-1 tranform rounded-xl  ${isOdd ? 'md:flex-row-reverse' : ''}`}>
+               <div key={feature.title} className={`flex flex-col md:flex-row items-center justify-center gap-20 p-6 h- bg-[#]  rounded-xl  ${isOdd ? 'md:flex-row-reverse' : ''}`}>
                   
 {/* IMAGE */}
                   <div className='flex  justify-center'>
@@ -118,7 +117,7 @@ const Features = () => {
                   ></div>
 
 
-                     <div className='relative z-10 p-6 text-center'>
+                     <div className='relative p-6 text-center'>
                         <h2 className='text-2xl font-bold mb-4 text-center'>{feature.title}</h2>
                      <p className='text-[17px] text-center'>{feature.description}</p>
                      </div>

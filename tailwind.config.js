@@ -21,7 +21,7 @@ export default {
             transform: 'translate(10px, -10px) scale(1.05)',
           },
           '50%': {
-            borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%', // Revert to initial for smooth loop
+            borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
             transform: 'translate(-5px, 5px) scale(0.95)',
           },
           '75%': {
