@@ -71,9 +71,6 @@ const How_It_Works = () => {
               '
             >
               <div className='flex flex-col items-center text-center transition-opacity p-5 duration-300 group-hover:opacity-0'>
-                {/* <div className='text-5xl mb-4 p-4  rounded-full'>
-                  {feature.icon}
-                </div> */}
                 <h3 className='text-xl font-bold text-[#5dbbee] p-4 text- mb-4'>{feature.title}</h3>
                 <p className='text-blue-200 text-base'>
                   {feature.shortDescription}
