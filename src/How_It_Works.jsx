@@ -49,7 +49,7 @@ const points = [
 const How_It_Works = () => {
   return (
     <section id='how_works' className='py-20 flex justify-center'>
-
+      {/* ANIMATION */}
       <AnimatedContent              
               distance={100} 
               direction="vertical"
@@ -60,50 +60,45 @@ const How_It_Works = () => {
               scale={.95}
               threshold={0.3} 
             >
-      <div className='text-center max-w-7xl mx-auto px-6 text-center'>
-        
-        <h2 className='text-[40px] font-bold mb-3 md:mb-8 text-cyan-500'>
-          How It Works
-        </h2>
-        <p className='text-blue-100 mb-16'>
-          Explore our powerful features designed to make your coding experience smoother and more efficient.
-        </p>
+        <div className='text-center max-w-7xl mx-auto px-6 text-center'>
+          {/* HEADING */}
+          <h2 className='text-[40px] font-bold mb-3 md:mb-8 text-cyan-500'>How It Works</h2>
+          <p className='text-blue-100 mb-16'>Explore our powerful features designed to make your coding experience smoother and more efficient.</p>
 
-        <div className='grid grid-cols-1 md:grid-cols-2  gap-20'>
-          
-          {points.map((feature, index) => (
-            <div
-              key={index}
-              className='
-                group relative bg-[#1b3553] rounded-2xl  px-3 py-10  max-w-6xl 
-                flex flex-col items-center 
-                transition-all duration-300 ease-in-out transform 
-                hover:translate-y-2 hover:shadow-gray-800 hover:shadow-2xl hover:scale-110
-                border border-gray-600 text-blue-200
-              '
-            >
-              <div className='flex flex-col items-center text-center transition-opacity p-5 duration-300 group-hover:opacity-0'>
-                <img src={feature.icon} className='h-[30px] w-[30px] mb-2' alt="" />
-                <h3 className='text-xl font-bold text-[#5dbbee] p-4 mb-2'>{feature.title}</h3>
-                <p className='text-blue-200 text-base'>
-                  {feature.shortDescription}
-                </p>
-              </div>
-
-              <div 
+          <div className='grid grid-cols-1 md:grid-cols-2  gap-20'>
+            {/* GRID */}
+            {points.map((feature, index) => (
+              <div
+                key={index}
                 className='
-                  absolute inset-0 p-6 flex items-center justify-center 
-                  opacity-0 transition-opacity duration-300
-                  group-hover:opacity-100
+                  group relative bg-[#1b3553] rounded-2xl  px-3 py-10  max-w-6xl 
+                  flex flex-col items-center 
+                  transition-all duration-300 ease-in-out transform 
+                  hover:translate-y-2 hover:shadow-gray-800 hover:shadow-2xl hover:scale-110
+                  border border-gray-600 text-blue-200
                 '
               >
-                <p className=''>{feature.longDescription}</p>
-              </div>
-            </div>
-          ))}
+                <div className='flex flex-col items-center text-center transition-opacity p-5 duration-300 group-hover:opacity-0'>
+                  <img src={feature.icon} className='h-[30px] w-[30px] mb-2' alt="" />
+                  <h3 className='text-xl font-bold text-[#5dbbee] p-4 mb-2'>{feature.title}</h3>
+                  <p className='text-blue-200 text-base'>
+                    {feature.shortDescription}
+                  </p>
+                </div>
 
+                <div 
+                  className='
+                    absolute inset-0 p-6 flex items-center justify-center 
+                    opacity-0 transition-opacity duration-300
+                    group-hover:opacity-100
+                  '
+                >
+                  <p className=''>{feature.longDescription}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
       </AnimatedContent>
     </section>
   );
