@@ -18,7 +18,7 @@ function App() {
         <div className='flex relative flex-col md:flex-row items-center justify-center gap-20 max-w-8xl mx-auto py-16 px-7 z-0'>
           <div className='fixed inset-0 w-full h-full -z-10 opacity-100'>
             <Aurora
-              colorStops={["#1d4050", "#4a6293", "#132852ff"]}
+              colorStops={["#1d4050", "#11357c", "#1c2e52"]}
               blend={0.5}
               amplitude={1.0}
               speed={1}
