@@ -1,44 +1,63 @@
 import React from 'react';
 import AnimatedContent from './components/AnimatedContent'
-
+import chat from './assets/chat.png'
+import error from './assets/error.png'
+import mode from './assets/mode.png'
+import lang from './assets/lang.png'
+import cld from './assets/cloud-i.png'
+import frnd from './assets/frnd.png'
+import s1 from './assets/s-1.jpg'
 const points = [
   {
     title: 'AI Chatbot',
     shortDescription: 'Instant, conversational error explanations.',
     longDescription: 'Get step-by-step explanations for your errors. Our chatbot breaks down complex problems into simple, understandable guidance.',
+    icon:chat,
+    imge:s1,
   },
   {
     title: 'Simple Errors',
     shortDescription: 'Error messages you can actually understand.',
     longDescription: 'We translate confusing compiler jargon into plain English, so you get clear guidance on what went wrong and how to fix it.',
+    icon:error,
+    imge:s1,
   },
   {
     title: 'AI Mode Switch',
     shortDescription: 'Toggle real-time code suggestions.',
     longDescription: 'Enable intelligent code suggestions and autocompletion when you need a boost, or toggle it off for a distraction-free experience.',
+    icon:mode,
+    imge:s1,
   },
   {
     title: 'Multi-Language',
     shortDescription: 'One compiler for all your languages.',
     longDescription: 'Seamlessly switch between Python, Java, C++, and more—all in one place without juggling different setups.',
+    icon:lang,
+    imge:s1,
   },
   {
     title: 'Cloud Accessibility',
     shortDescription: 'Code anywhere, anytime, without setup.',
     longDescription: 'Our cloud platform eliminates setup or version management, ensuring seamless use across all your devices.',
+    icon:cld,
+    imge:s1,
   },
+
   {
     title: 'Beginner-Friendly',
     shortDescription: 'Guided help for new coders.',
     longDescription: 'New to coding? Our simplified guidance and clear explanations will help you learn the fundamentals faster.',
+    icon:frnd,
+    imge:s1
   },
 ];
 
 const How_It_Works = () => {
   return (
     <section id='how_works' className='py-20 bg- flex justify-center'>
-      <AnimatedContent
-              
+
+      <AnimatedContent              
               distance={100} 
               direction="vertical"
               duration={1.0}
@@ -57,21 +76,23 @@ const How_It_Works = () => {
           Explore our powerful features designed to make your coding experience smoother and more efficient.
         </p>
 
-        <div className='grid grid-cols-1 md:grid-cols-2  gap-12'>
+        <div className='grid grid-cols-1 md:grid-cols-2  gap-20'>
           
           {points.map((feature, index) => (
             <div
-              key={index}
-              className='
-                group relative bg-[#1b3553] rounded-2xl  px-3 py-10  max-w-6xl 
-                flex flex-col items-center 
-                transition-all duration-300 ease-in-out transform 
-                hover:translate-y-2 hover:shadow-gray-800 hover:shadow-2xl hover:scale-110
-                overflow-hidden border border-gray-600 text-blue-200
-              '
+            key={index}
+            className='
+            group relative bg-[#1b3553] rounded-2xl  px-3 py-10  max-w-6xl 
+            flex flex-col items-center 
+            transition-all duration-300 ease-in-out transform 
+            hover:translate-y-2 hover:shadow-gray-800 hover:shadow-2xl hover:scale-110
+            border border-gray-600 text-blue-200
+            '
             >
+            
               <div className='flex flex-col items-center text-center transition-opacity p-5 duration-300 group-hover:opacity-0'>
-                <h3 className='text-xl font-bold text-[#5dbbee] p-4 text- mb-4'>{feature.title}</h3>
+                <img src={feature.icon} className='h-[30px] w-[30px] mb-2' alt="" />
+                <h3 className='text-xl font-bold text-[#5dbbee] p-4 text- mb-2'>{feature.title}</h3>
                 <p className='text-blue-200 text-base'>
                   {feature.shortDescription}
                 </p>
@@ -79,11 +100,12 @@ const How_It_Works = () => {
 
               <div 
                 className='
-                  absolute inset-0 p-6 flex items-center justify-center 
+                  absolute inset-0 p-6 flex flex-col items-center justify-center 
                   opacity-0 transition-opacity duration-300 bg-cyan-[#1b627e]
                   group-hover:opacity-100
                 '
               >
+                <div className="absolute inset-0 bg-cover bg-cover rounded-xl"  />
                 <p className=''>{feature.longDescription}</p>
               </div>
             </div>

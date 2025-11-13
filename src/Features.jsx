@@ -1,47 +1,49 @@
 import React from 'react'
-import images1 from './assets/image.png'
+import images3 from './assets/3ed(2).jpg'
+import images4 from './assets/cloud3.jpg'
+import images5 from './assets/real-time(2).jpg'
 import images2 from './assets/Human-Robot.jpeg'
-import images4 from './assets/image2.png'
+import images1 from './assets/image2.png'
 import AnimatedContent from './components/AnimatedContent'
 // import images3 from './assets/Screenshot 2025-11-07 220417.png'
 const featuresList = [
    {
       title: "AI powered debugging" ,
       description: "Real-time error ananlysis, explanations, and fix suggestions as you type" ,
-      img:images4
+      img:images1
    },
    {
       title: "Zero Setup, Anywhere",
-      description: "No installs or version headaches - just opes in your browser.",
+      description: "No installs or version headaches - just opens in your browser.",
       img:images2
    },
    {
       title: "Smart Autocomplete",
-      description: "Context-aware code completion to speed up writing and reduce bugs.",
-      img:images1
+      description: "Context-aware code completion to speed up writing and reduces bugs.",
+      img:images3
    },
    {
       title: "Cloud-Based Compilation",
       description: "Secured the user data in a MongoDB cloud databse , ensuring persistence, scalability, and quick access.",
-      img:images1
+      img:images4
    },
    {
       title: "Real-Time Execution",
       description: "Compile and run code instantly with cloud-backed performance.",
-      img:images1
+      img:images5
    }
 ];
 const Features = () => {
   return (
     <div id='features' className='py-[150px] flex-col items-center justify-center'>
 
-      <h1 className='text-[40px] font-bold mb-3 md:mb-8 text-cyan-500 hover:text-cyan-600 text-center'>FEATURES</h1>
+      <h1 className='text-[40px] font-bold mb-3 md:mb-8 text-cyan-500 hover:text-cyan-600 text-center relative'>FEATURES</h1>
       <div className='md:flex flex-col gap-20'>
          {featuresList.map((feature,index) =>{
             const isOdd = index%2 !== 0;
 
             return(
-// animationnnn
+         // animationnnn
                <AnimatedContent
               key={feature.title}
               distance={40} 
@@ -56,15 +58,15 @@ const Features = () => {
             >
                <div key={feature.title} className={`flex flex-col md:flex-row items-center justify-center gap-20 p-6 h- bg-[#]  rounded-xl  ${isOdd ? 'md:flex-row-reverse' : ''}`}>
                   
-{/* IMAGE */}
+         {/* IMAGE */}
                   <div className='flex  justify-center'>
-                     <img className= {`w-full h-auto object-cover rounded-full max-w-xl  shadow-[0_0_15px_rgba(58,163,216,0.3)] hover:shadow-[0_0_15px_rgba(58,163,216,0.35)] ${isOdd ?  
+                     <img className= {`w-[600px] opacity-95 h-[300px] object- rounded-full max-w-xl  shadow-[0_0_15px_rgba(58,163,216,0.3)] hover:shadow-[0_0_15px_rgba(58,163,216,0.35)] ${isOdd ?  
                      'md:mr-[150px]' 
                      : ' md:ml-[150px]'}`
                      }src={feature.img} alt ={feature.title}/>
                   </div>
 
-{/* TEXT */}
+         {/* TEXT */}
          <div className={` flex relative flex-col hover:bg-[#5799b9] w-[400px] h-[400px] p-2 justify-center gap-3 item-center rounded-full bg-[#4a8daf] ${isOdd 
                   ? 'md:ml-[200px]'  
                   : 'md:mr-[200px]'  

@@ -6,25 +6,17 @@ import img_ from './assets/robot.jpeg'
 import Footer from './Footer'
 import arrow from './assets/arrow_right.png'
 import Aurora from './components/Aurora'
+
 function App() {
   return (
     <div className=' relative bg-[#071530] text-white min-h-screen'>
-      {/* animation plasma */}
-      {/* <div className='fixed inset-0 w-full h-full -z-10 opacity-100'>
-      <Plasma
-        color="#ff6b35"
-        speed={0.6}
-        direction="forward"
-        scale={1.1}
-        opacity={0.8}
-        mouseInteractive={false}
-      />
-      </div>  */}
+      {/* animation plasma */} 
+       
 
       <div className=''>
           <Header/> 
         <div className='flex relative flex-col md:flex-row items-center justify-center gap-20 max-w-8xl mx-auto py-16 px-7 z-0'>
-          <div className='fixed inset-0 w-full h-full -z-10 opacity-60'>
+          <div className='fixed inset-0 w-full h-full -z-10 opacity-100'>
             <Aurora
               colorStops={["#1d4050", "#11357c", "#0c2556"]}
               blend={0.5}
@@ -39,7 +31,8 @@ function App() {
                     <h1 className="text-6xl flex md:text-7xl font-bold text-">Compile<span className='text-[#0178da]'>IN</span></h1>
 
                     <p className='text-[20px] flex md:text-xl text-gray-400 mt-10 '> Code Smarter, Debug Faster — in the Cloud and Enjoy the new Collaboration Experience of AI</p>
-                  {/* BUTTONs */}
+
+                  {/* ATTACH LINK OF COMPILER */}
                   <a href="" className='text-white inline-flex items-center px-4 py-3 mt-6 rounded-xl hover:bg-[#2879a8] transition-colors bg-[#3194ce]  shadow-md shadow-black hover:shadow-lg hover:shadow-black active:scale-95 '>Start Coding Now <img className="
                   " src={`${arrow}`} alt="" /> </a>
                   </div>
